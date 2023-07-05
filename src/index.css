@@ -34,3 +34,10 @@ p {
     color: var(--grey-1);
     line-height: 1.563rem;
 }
+
+.visually-hidden {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}

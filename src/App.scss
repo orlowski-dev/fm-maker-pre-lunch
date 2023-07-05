@@ -7,7 +7,7 @@ header {
     text-align: center;
 
     img {
-        height: 35px;
+        height: 2.1875rem;
     }
 }
 
@@ -51,8 +51,147 @@ main {
         }
     }
 
+    .presentation-container {
+        margin-top: 6.0625rem;
+        padding: 1.5rem;
+        text-align: center;
+        display: grid;
+        gap: 2.5rem;
+
+        .presentation-card {
+            .img-container {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .pricing-plans-section {
+        padding: 1.5rem;
+        text-align: center;
+        margin-top: 7.25rem;
+
+        .pricing-card {
+            max-width: 445px;
+        }
+
+        .section-title,
+        .section-p {
+            max-width: 573px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+        }
+
+        .cards-container {
+            text-align: left;
+            margin-top: 4.75rem;
+            display: grid;
+            gap: 4rem;
+            justify-content: center;
+        }
+    }
 }
 
+footer {
+    margin-top: 7.5rem;
+
+    text-align: center;
+    color: var(--white);
+
+    .register-to-notify-section {
+        background-image: url('./assets/bg-footer-squiggle.svg');
+        background-position: top 20px center;
+        background-repeat: no-repeat;
+        background-size: 584px 80px;
+        padding: 1.5rem;
+
+        form {
+            margin-top: 30px;
+            display: grid;
+            gap: 1.5rem;
+
+            input {
+                background-color: var(--dark-1);
+                border-radius: 50px;
+                padding: 0.625rem 0.9375rem;
+                border: 2px solid var(--dark-1);
+                width: 100%;
+                color: var(--white);
+
+                &::placeholder {
+                    color: var(--grey-1);
+                }
+
+                transition: border-color .1s ease-in;
+                font-weight: 800;
+                font-size: 0.9375rem;
+
+                &.invalid {
+                    border-color: var(--pink--error);
+                }
+            }
+
+            button {
+                padding: 0.625rem 1.125rem;
+                border-radius: 50px;
+                border: 2px solid var(--cyan);
+                background-color: var(--cyan);
+                color: var(--dark-1);
+                transition: background-color .1s ease-in, color .1s ease-in;
+                font-weight: 800;
+                font-size: 0.9375rem;
+                width: 100%;
+
+                &:hover {
+                    background-color: var(--dark-2);
+                    color: var(--cyan);
+                }
+            }
+
+            .input-error {
+                display: none;
+                padding: 10px 16px;
+                color: var(--pink--error);
+                font-weight: 500;
+                font-size: 0.75rem;
+                text-align: left;
+
+                &.visible {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .attribution-section {
+        font-size: 0.9375rem;
+        margin-top: 100px;
+        padding: 1.5rem 0;
+
+        a {
+            color: var(--cyan);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .created-with {
+            margin-top: 0.875rem;
+
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                height: 1.375rem;
+                margin: 0 6px;
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
     header {
@@ -65,6 +204,7 @@ main {
             max-width: unset;
 
             .img-container {
+                margin: 0;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -79,9 +219,9 @@ main {
                     386px 268px,
                     317px 365px;
                 background-position:
-                    left calc(50% - 400px) center,
+                    left calc(50% - 400px) top,
                     center,
-                    right calc(50% - 400px) center;
+                    right calc(50% - 400px) top;
                 ;
             }
 
@@ -92,6 +232,52 @@ main {
                 h1 {
                     padding-top: 3rem;
                 }
+            }
+        }
+
+        .presentation-container {
+            padding: 0;
+            width: 573px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 110px;
+
+            article.presentation-card:nth-child(even) {
+                justify-self: flex-end;
+            }
+
+            .presentation-card {
+                display: grid;
+                grid-template-columns: 120px auto;
+                gap: 2.5rem;
+                align-items: center;
+                width: 515px;
+
+                .img-container {
+                    margin-right: 2.5rem;
+                }
+
+                .content {
+                    text-align: left;
+
+                    h2 {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .register-to-notify-section {
+            background-size: 1022px 140px;
+            background-position: top center;
+
+            form {
+                max-width: 476px;
+                margin: 0 auto;
+                margin-top: 30px;
+                grid-template-columns: auto 140px;
             }
         }
     }
@@ -109,9 +295,9 @@ main {
                     396px 444px;
 
                 background-position:
-                    left calc(50% - 570px) center,
+                    left calc(50% - 570px) top,
                     top center,
-                    right calc(50% - 580px) center;
+                    right calc(50% - 580px) top;
                 ;
             }
 
@@ -123,6 +309,55 @@ main {
                     line-height: 3.5rem;
                     padding-top: 80px;
                 }
+            }
+        }
+
+        .presentation-container {
+            margin-top: 204px;
+            width: 1110px;
+            padding: 1.5rem;
+            grid-template-columns: repeat(4, 1fr);
+
+            article.presentation-card:nth-child(odd) {
+                margin-top: 2.75rem;
+            }
+
+            .presentation-card {
+                grid-template-columns: 1fr;
+                width: unset;
+                align-self: flex-start;
+
+                .img-container {
+                    margin: unset;
+                }
+            }
+        }
+
+        .pricing-plans-section {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.875rem;
+
+                .pricing-card:first-child {
+                    justify-self: flex-end;
+                    align-self: center;
+                }
+
+                .pricing-card.paid {
+                    padding: 2rem 1.5rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        .register-to-notify-section {
+            min-height: 228px;
+            background-size: 1665px 228px;
+            background-position: top center;
+
+            .section-title {
+                margin-top: 2.5rem;
             }
         }
     }

@@ -1,0 +1,80 @@
+.pricing-card {
+    padding: 1.5rem;
+    background-color: var(--dark-1);
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 46px;
+        height: 46px;
+        background-image: url('../assets/icon-free.svg');
+        top: -23px;
+        left: 24px;
+        position: absolute;
+    }
+
+    &.paid {
+        background-color: var(--cyan);
+        color: var(--dark-2);
+
+        &::before {
+            width: 51px;
+            height: 65px;
+            background-image: url('../assets/icon-paid.svg');
+            top: -32px;
+            left: 24px;
+        }
+
+        ul li {
+            svg {
+                path {
+                    fill: var(--dark-2) !important;
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+        margin-bottom: 0 !important;
+        margin-top: 1.5rem;
+    }
+
+    .price-area {
+        h3 {
+            font-size: 2.5rem;
+            display: inline-flex;
+            align-items: center;
+
+            span {
+                font-size: 0.9375rem;
+                font-weight: 500;
+                color: var(--grey-1);
+                margin-left: 10px;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    ul li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        svg {
+            margin-right: 14px;
+
+            path {
+                fill: var(--cyan) !important;
+            }
+        }
+    }
+}
