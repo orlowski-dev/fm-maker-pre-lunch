@@ -1,11 +1,12 @@
 import './PricingCard.scss';
 import PropTypes from 'prop-types';
 import { ReactSVG } from 'react-svg';
+import iconCheck from '../assets/icon-check.svg';
 
 export default function PricingCard({ title, desc, price, paid, features }) {
 
     const featuresLi = features.map((feature, index) => {
-        return <li key={index}> <ReactSVG src='../src/assets/icon-check.svg' /> {feature}</li>
+        return <li key={index}> <ReactSVG src={iconCheck} /> {feature}</li>
     });
 
 

@@ -13,7 +13,7 @@ export default function App() {
 
     const presentationCards = CardsData.map((card, index) => {
         return <PresentationCard
-            imagePath={`/cards/${card.imgName}`}
+            imagePath={`/fm-maker-pre-lunch/cards/${card.imgName}`}
             h2Content={card.title}
             pContent={card.description}
             key={index}
